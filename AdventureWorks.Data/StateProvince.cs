@@ -14,6 +14,7 @@ namespace AdventureWorks.Data
     
     public partial class StateProvince
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public StateProvince()
         {
             this.Addresses = new HashSet<Address>();
@@ -28,6 +29,7 @@ namespace AdventureWorks.Data
         public System.Guid rowguid { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Address> Addresses { get; set; }
         public virtual CountryRegion CountryRegion { get; set; }
     }

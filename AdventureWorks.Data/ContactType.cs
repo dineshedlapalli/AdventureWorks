@@ -14,6 +14,7 @@ namespace AdventureWorks.Data
     
     public partial class ContactType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ContactType()
         {
             this.BusinessEntityContacts = new HashSet<BusinessEntityContact>();
@@ -23,6 +24,7 @@ namespace AdventureWorks.Data
         public string Name { get; set; }
         public System.DateTime ModifiedDate { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BusinessEntityContact> BusinessEntityContacts { get; set; }
     }
 }

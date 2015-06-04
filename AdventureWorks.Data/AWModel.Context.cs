@@ -18,7 +18,6 @@ namespace AdventureWorks.Data
         public AdventureWorksEntities()
             : base("name=AdventureWorksEntities")
         {
-            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

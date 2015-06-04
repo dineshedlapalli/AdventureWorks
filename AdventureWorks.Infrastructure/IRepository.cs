@@ -1,11 +1,14 @@
 ﻿
+using System.Collections.Generic;
+
 namespace AdventureWorks.Infrastructure.DomainBase
 {
-    public interface IRepository<T> where T : EntityBase
+    public interface IRepository<TEntity>// where TEntity : EntityBase
     {
-        T FindBy(int businessEntityId);
-        void Add(T item);
-        T this[int businessEntityId] { get; set; }
-        void Remove(T item);
+        IEnumerable<TEntity> ListAll();
+        TEntity GetById(int businessEntityId);
+        void Insert(TEntity entity);
+        void Update(TEntity entity);
+        void Delete(int businessEntityId);
     }
 }

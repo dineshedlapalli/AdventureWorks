@@ -75,5 +75,30 @@ namespace AdventureWorks.Infrastructure.RepositoryFramework
         protected abstract void PersistNewItem(T item);
         protected abstract void PersistUpdatedItem(T item);
         protected abstract void PersistDeletedItem(T item);
+
+        public System.Collections.Generic.IEnumerable<T> ListAll()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public T GetById(int businessEntityId)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Insert(T entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Update(T entity)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Delete(int businessEntityId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
